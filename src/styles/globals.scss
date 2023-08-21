@@ -1,0 +1,233 @@
+$color-primary: blueviolet;
+$font-primary: "Maven Pro", sans-serif;
+* {
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+@mixin number {
+  color: #fff;
+  font-family: $font-primary;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 52px;
+  margin: 0;
+}
+@mixin text {
+  color: #fff;
+  font-family: $font-primary;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  margin: 0;
+  width: max-content;
+}
+// * {
+//   color: $color-primary;
+//   font-family: $font-primary;
+// }
+.homepagesectionpartner {
+  background-color: #cd0404; // Màu nền
+  height: auto; // Chiều cao 100 viewport height
+
+  &__container {
+    width: 1280px; // Độ rộng của container
+    margin-left: 80px; // Khoảng cách lề trái
+  }
+
+  &__title {
+    color: #fff;
+    font-family: $font-primary;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 68px;
+    width: 517px;
+  }
+  &__below {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 80px;
+    padding-bottom: 150px;
+    &__button {
+      color: #fff;
+      font-family: $font-primary;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 28px;
+      display: flex;
+      padding: 16px 20px;
+      align-items: center;
+      gap: 8px;
+      border: 2px solid #fff;
+      border-radius: 32px;
+    }
+    &__text {
+      @include text;
+      width: 345px;
+    }
+  }
+}
+.homepagesectionpartner__content {
+  border-left: 1px solid white;
+  padding: 80px 0 80px 80px;
+  height: auto;
+  display: flex;
+  gap: 165px;
+  flex-wrap: wrap;
+  &__colrightmain {
+    margin-top: -25px;
+  }
+  &__image {
+    height: fit-content;
+  }
+  &__image img {
+    background-color: #fff;
+    border-radius: 50%;
+    border: 3px solid red;
+    height: 178px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  }
+  &__image:nth-child(2) img {
+    border: 3px solid rgba(111, 26, 182, 1);
+  }
+  &__image:nth-child(5) img {
+    border: 3px solid rgba(111, 26, 182, 1);
+  }
+  &__colrightimage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px 90px;
+    height: fit-content;
+  }
+  &__colright--text {
+    color: #fff;
+    font-family: $font-primary;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px;
+    display: block;
+    margin: 0;
+    height: fit-content;
+    margin-bottom: 30px;
+  }
+  &__colleft {
+    display: flex;
+    flex-direction: column;
+    gap: 86.4px;
+  }
+  &--number {
+    @include number;
+  }
+  &--text {
+    @include text;
+  }
+}
+footer {
+  background-color: #3d1766;
+}
+.footer__row {
+  display: flex;
+  gap: 60px;
+  padding: 95px 80px;
+  flex-wrap: wrap;
+  .colum-1{
+    width: 25%;
+  }
+  .colum-2{
+    width: 30%;
+    display:flex ;
+    gap: 37px;
+    &__right{
+      margin-top: 10%;
+    }
+  }
+  .colum-3{
+    width: 15%;
+  }
+  .colum-4{
+    width: 15%;
+  }
+  p,
+  li {
+    color: #fff;
+    font-family: "Maven Pro", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
+.toogle span {
+  cursor: pointer;
+  position: relative;
+  width: 36px;
+  height: 4px;
+  background-color: aquamarine;
+  margin-bottom: 8px;
+  transition: 0.5s;
+  display: block;
+}
+.toogle span:nth-child(1) {
+  transform-origin: left;
+}
+.toogle span:nth-child(2) {
+  transform-origin: center;
+}
+.toogle span:nth-child(3) {
+  transform-origin: left;
+}
+.toogle.active span:nth-child(1) {
+  transform: rotate(45deg);
+  left: 2px;
+}
+.toogle.active span:nth-child(2) {
+  transform: rotate(315deg);
+  right: 3px;
+}
+.toogle.active span:nth-child(3) {
+  transform: scaleX(0);
+}
+.footer__row {
+  .colum-1 p{
+    color: #fff;
+    font-family: $font-primary;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .colum-1 span{
+    color: #fff;
+    font-family: $font-primary;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+  }
+  a {
+    color: #fff;
+    font-family: $font-primary;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  p {
+    color: #fff;
+    font-family: $font-primary;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+  }
+}
