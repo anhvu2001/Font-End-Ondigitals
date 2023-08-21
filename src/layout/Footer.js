@@ -113,6 +113,21 @@ export default function Footer() {
             <a className="icon--Zalo">Zalo</a>
           </div>
         </div>
+        <div className="colum-4">
+          <p>FOLLOW US</p>
+          <div className="icon__homepage--social">
+            <a>
+              <FontAwesomeIcon icon={faFacebook} />
+            </a>
+            <a>
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
+            <a>
+              <FontAwesomeIcon icon={faLinkedinIn} />
+            </a>
+            <a className="icon--Zalo">Zalo</a>
+          </div>
+        </div>
       </div>
     </footer>
   );
